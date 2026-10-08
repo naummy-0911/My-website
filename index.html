@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Muhammad Nauman Khan | Portfolio</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #0f172a;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 90vh;
+
+            background:
+                linear-gradient(135deg, #0f172a, #172554);
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 70px 10%;
+
+            gap: 50px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text small {
+            color: #38bdf8;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            margin: 12px 0;
+        }
+
+        .hero-text h2 {
+            font-size: 24px;
+            color: #cbd5e1;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .hero-text p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 24px;
+
+            background: #38bdf8;
+            color: #0f172a;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-2px);
+        }
+
+
+        /* PROFILE PHOTO */
+
+        .profile-photo {
+            width: 300px;
+            height: 380px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            border: 4px solid #38bdf8;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+
+        /* ================= GENERAL SECTIONS ================= */
+
+        section {
+            padding: 75px 10%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title h2 {
+            font-size: 32px;
+            color: #0f172a;
+        }
+
+        .title p {
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            text-align: center;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 8px 25px rgba(15, 23, 42, 0.07);
+        }
+
+        .about-box p {
+            color: #475569;
+        }
+
+
+        /* ================= EDUCATION ================= */
+
+        .education-container {
+            max-width: 850px;
+
+            margin: auto;
+
+            display: grid;
+
+            gap: 20px;
+        }
+
+        .education-card {
+            background: white;
+
+            padding: 25px 30px;
+
+            border-left: 4px solid #38bdf8;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 20px rgba(15, 23, 42, 0.07);
+
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .education-card .year {
+            color: #2563eb;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+        .education-card h3 {
+            color: #0f172a;
+
+            margin: 7px 0;
+        }
+
+        .education-card p {
+            color: #64748b;
+        }
+
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience-title {
+            margin-top: 70px;
+        }
+
+        .experience-container {
+            max-width: 850px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        .experience-card {
+            background: #0f172a;
+
+            color: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 20px rgba(15, 23, 42, 0.12);
+        }
+
+        .experience-card h3 {
+            color: #38bdf8;
+
+            margin-bottom: 8px;
+        }
+
+        .experience-card p {
+            color: #cbd5e1;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            border-bottom: 3px solid #38bdf8;
+
+            box-shadow:
+                0 8px 20px rgba(15, 23, 42, 0.06);
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #0f172a;
+
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 20px rgba(15, 23, 42, 0.06);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #64748b;
+        }
+
+
+        /* ================= LEARNING ================= */
+
+        .learning-box {
+            max-width: 850px;
+
+            margin: auto;
+
+            background: #e0f2fe;
+
+            padding: 35px;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+        .learning-box p {
+            color: #334155;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact-container {
+            max-width: 900px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 25px;
+        }
+
+        .contact-card {
+            background: white;
+
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 20px rgba(15, 23, 42, 0.06);
+        }
+
+        .contact-card h3 {
+            color: #0f172a;
+
+            margin-bottom: 10px;
+        }
+
+        .contact-card a {
+            color: #2563eb;
+
+            text-decoration: none;
+
+            word-break: break-word;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #0f172a;
+
+            color: #cbd5e1;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 750px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            nav ul {
+                justify-content: center;
+
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+
+                text-align: center;
+
+                padding: 55px 6%;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .hero-text h2 {
+                font-size: 21px;
+            }
+
+            .profile-photo {
+                width: 240px;
+
+                height: 300px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        Muhammad <span>Nauman Khan</span>
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#education">Education</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#learning">Learning</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <small>
+            WELCOME TO MY PORTFOLIO
+        </small>
+
+        <h1>
+            Muhammad Nauman Khan
+        </h1>
+
+        <h2>
+            Computer Science Student
+        </h2>
+
+        <p>
+            I am a Computer Science student interested in
+            programming, web development and technology.
+            I enjoy learning new skills and building
+            practical projects.
+        </p>
+
+        <a href="#about" class="btn">
+            Explore My Profile
+        </a>
+
+    </div>
+
+
+    <!-- YOUR PHOTO -->
+
+    <img
+        class="profile-photo"
+        src="PASTE_YOUR_PHOTO_HERE"
+        alt="Muhammad Nauman Khan"
+    >
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="title">
+
+        <h2>
+            About Me
+        </h2>
+
+        <p>
+            Get to know me
+        </p>
+
+    </div>
+
+
+    <div class="about-box">
+
+        <p>
+            Hello! I'm
+            <strong>
+                Muhammad Nauman Khan
+            </strong>,
+            a Computer Science student interested in
+            programming, web development and modern
+            technology.
+        </p>
+
+        <br>
+
+        <p>
+            I am continuously improving my technical
+            skills through courses, practical projects
+            and hands-on learning.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+    <div class="title">
+
+        <h2>
+            Education
+        </h2>
+
+        <p>
+            My academic journey
+        </p>
+
+    </div>
+
+
+    <div class="education-container">
+
+
+        <div class="education-card">
+
+            <span class="year">
+                KG – Grade 4
+            </span>
+
+            <h3>
+                Doaba Public High School
+            </h3>
+
+            <p>
+                Early School Education
+            </p>
+
+        </div>
+
+
+
+        <div class="education-card">
+
+            <span class="year">
+                Grade 5
+            </span>
+
+            <h3>
+                Al Karim Public High School, Charsadda
+            </h3>
+
+            <p>
+                School Education
+            </p>
+
+        </div>
+
+
+
+        <div class="education-card">
+
+            <span class="year">
+                Grade 6 – 10
+            </span>
+
+            <h3>
+                New Islamia Public High School, Charsadda
+            </h3>
+
+            <p>
+                Secondary School Education
+            </p>
+
+        </div>
+
+
+
+        <div class="education-card">
+
+            <span class="year">
+                Matric • 2021
+            </span>
+
+            <h3>
+                New Islamia Public High School and College, Charsadda
+            </h3>
+
+            <p>
+                <strong>
+                    Marks: 1062 / 1100
+                </strong>
+            </p>
+
+        </div>
+
+
+
+        <div class="education-card">
+
+            <span class="year">
+                Intermediate • 2022 – 2024
+            </span>
+
+            <h3>
+                Islamia College Peshawar
+            </h3>
+
+            <p>
+                <strong>
+                    Marks: 1111 / 1200
+                </strong>
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- EXPERIENCE -->
+
+    <div class="title experience-title">
+
+        <h2>
+            Experience & Achievements
+        </h2>
+
+    </div>
+
+
+    <div class="experience-container">
+
+
+        <div class="experience-card">
+
+            <h3>
+                ISSB
+            </h3>
+
+            <p>
+                156 PMA Long Course
+            </p>
+
+        </div>
+
+
+
+        <div class="experience-card">
+
+            <h3>
+                Hifz-e-Quran
+            </h3>
+
+            <p>
+                Completed memorization of the Holy Quran.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="title">
+
+        <h2>
+            My Skills
+        </h2>
+
+        <p>
+            Technologies I am learning
+        </p>
+
+    </div>
+
+
+    <div class="skills">
+
+
+        <div class="skill-card">
+
+            <h3>
+                HTML
+            </h3>
+
+            <p>
+                Building modern website structures.
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-card">
+
+            <h3>
+                CSS
+            </h3>
+
+            <p>
+                Creating clean and responsive designs.
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-card">
+
+            <h3>
+                JavaScript
+            </h3>
+
+            <p>
+                Learning interactive web functionality.
+            </p>
+
+        </div>
+
+
+
+        <div class="skill-card">
+
+            <h3>
+                Python
+            </h3>
+
+            <p>
+                Programming and problem solving.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="title">
+
+        <h2>
+            My Projects
+        </h2>
+
+        <p>
+            Some of my work
+        </p>
+
+    </div>
+
+
+    <div class="projects">
+
+
+        <div class="project-card">
+
+            <h3>
+                Personal Portfolio
+            </h3>
+
+            <p>
+                A professional personal portfolio
+                website built using HTML and CSS.
+            </p>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <h3>
+                Python Projects
+            </h3>
+
+            <p>
+                Practical Python projects completed
+                during my programming learning journey.
+            </p>
+
+        </div>
+
+
+
+        <div class="project-card">
+
+            <h3>
+                Future Projects
+            </h3>
+
+            <p>
+                More projects will be added as I
+                continue developing my skills.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= LEARNING JOURNEY ================= -->
+
+<section id="learning">
+
+    <div class="title">
+
+        <h2>
+            My Learning Journey
+        </h2>
+
+        <p>
+            Always learning. Always improving.
+        </p>
+
+    </div>
+
+
+    <div class="learning-box">
+
+        <p>
+            My learning journey includes Python
+            programming, web development and
+            Computer Science concepts.
+        </p>
+
+        <br>
+
+        <p>
+            I continue to develop my skills through
+            structured learning, practical projects
+            and hands-on experience.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="title">
+
+        <h2>
+            Contact Me
+        </h2>
+
+        <p>
+            Let's connect
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <div class="contact-card">
+
+            <h3>
+                Email
+            </h3>
+
+            <a href="mailto:mnaumankhan0911@gmail.com">
+
+                mnaumankhan0911@gmail.com
+
+            </a>
+
+        </div>
+
+
+
+        <div class="contact-card">
+
+            <h3>
+                Phone
+            </h3>
+
+            <a href="tel:03265795530">
+
+                03265795530
+
+            </a>
+
+        </div>
+
+
+
+        <div class="contact-card">
+
+            <h3>
+                LinkedIn
+            </h3>
+
+            <p>
+                <a href="https://www.linkedin.com/in/muhammad-nauman-khan-2b3740394/" target="_blank">
+    https://www.linkedin.com/in/muhammad-nauman-khan-2b3740394/
+                </a>
+                </>
+    LinkedIn
+                </>
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Muhammad Nauman Khan.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
